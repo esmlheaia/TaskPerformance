@@ -8,7 +8,7 @@ namespace CalculatorPrivateAssembly
 {
     public class BasicComputation
     {
-        public static float Add(float num1, float num2)
+        public static float Add(float num1, float num2) 
         {
             return num1 + num2;
         }

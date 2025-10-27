@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtImput1 = new System.Windows.Forms.TextBox();
             this.txtImput2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCalculation = new System.Windows.Forms.ComboBox();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCompute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,6 +51,7 @@
             // 
             // txtImput1
             // 
+            this.txtImput1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImput1.Location = new System.Drawing.Point(16, 102);
             this.txtImput1.Multiline = true;
             this.txtImput1.Name = "txtImput1";
@@ -59,19 +60,25 @@
             // 
             // txtImput2
             // 
+            this.txtImput2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImput2.Location = new System.Drawing.Point(16, 196);
             this.txtImput2.Multiline = true;
             this.txtImput2.Name = "txtImput2";
             this.txtImput2.Size = new System.Drawing.Size(259, 51);
             this.txtImput2.TabIndex = 2;
             // 
-            // comboBox1
+            // cbCalculation
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 165);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(64, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cbCalculation.FormattingEnabled = true;
+            this.cbCalculation.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "*",
+            "/"});
+            this.cbCalculation.Location = new System.Drawing.Point(108, 165);
+            this.cbCalculation.Name = "cbCalculation";
+            this.cbCalculation.Size = new System.Drawing.Size(64, 21);
+            this.cbCalculation.TabIndex = 3;
             // 
             // lblTotal
             // 
@@ -84,18 +91,18 @@
             this.lblTotal.Text = "Total:\r\n\r\n";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnCompute
             // 
-            this.button1.BackColor = System.Drawing.Color.Pink;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(92, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Compute";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCompute.BackColor = System.Drawing.Color.Pink;
+            this.btnCompute.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompute.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCompute.Location = new System.Drawing.Point(92, 349);
+            this.btnCompute.Name = "btnCompute";
+            this.btnCompute.Size = new System.Drawing.Size(110, 38);
+            this.btnCompute.TabIndex = 5;
+            this.btnCompute.Text = "Compute";
+            this.btnCompute.UseVisualStyleBackColor = false;
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
             // 
             // FrmBasicCalculator
             // 
@@ -104,9 +111,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(287, 399);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCompute);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCalculation);
             this.Controls.Add(this.txtImput2);
             this.Controls.Add(this.txtImput1);
             this.Controls.Add(this.label1);
@@ -123,9 +130,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtImput1;
         private System.Windows.Forms.TextBox txtImput2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCalculation;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCompute;
     }
 }
 
