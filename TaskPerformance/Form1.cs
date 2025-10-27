@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace TaskPerformance
 {
-    public partial class Form1 : Form
+    public partial class FrmBasicCalculator : Form
     {
-        public Form1()
+        public FrmBasicCalculator()
         {
             InitializeComponent();
         }
-    }
-}
+
+       
